@@ -49,11 +49,6 @@ resource "yandex_compute_instance" "netology" {
     nat = true
   }
 
-  metadata = {
-    ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
-  }
-}
-
 // Создаем частную сеть
 resource "yandex_vpc_network" "network_netology" {
   name = "net_netology"
