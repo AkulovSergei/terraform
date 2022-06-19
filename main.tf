@@ -48,6 +48,7 @@ resource "yandex_compute_instance" "netology" {
     subnet_id = yandex_vpc_subnet.subnet_netology.id
     nat = true
   }
+}
 
 // Создаем частную сеть
 resource "yandex_vpc_network" "network_netology" {
